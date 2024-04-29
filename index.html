@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Roll Dice</title>
+        <link rel="stylesheet" href="./style/game_2.css" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+
+    <body onload="createMatrix()">
+        <div class="container">
+            <div class="main-board"></div>
+            <audio id="ladderSound" src="/assets/Crowd Reactions Small Group Yeah  Happy - QuickSounds.com.mp3"></audio>
+            <audio id="snakeSound" src="/assets/Snake Strike - QuickSounds.com.mp3"></audio>
+            <div class="dice-container">
+                <audio id="diceSound" src="/assets/dice-142528.mp3"></audio>
+                <img src="assets/dice1.png" id="dice-id"onclick="roll()"> 
+                <button onclick="roll()">Roll Dice</button> 
+                <button id="quitButton">Quit</button>
+                </div>
+            </div> 
+        </div>
+
+        <button id="aboutBtn" class="about__button">About The Game</button>
+        <div id="aboutDiv" class="about__container" style="display: none;">
+            
+            <h1>About Fostering Linux Snake and Ladder Game</h1>
+    
+            <p> Our Snake and Ladder Game is a thrilling ride simulating the internship program at Fostering Linux! </p>
+            <p>Each step in the game gives you insights into our company's operations, strategies, and values.</p>
+            <p>The goal of the game is to reach 100 as quickly as possible! But en route, there are some ups and some downs. The "Sad Foxian" drags you down when you do something "wrong" and the "Happy Foxian" takes you higher when you do something "right." This innovative approach will help you understand how to dodge real-life challenges you face at the program and how to speeden your climb to the top.</p>
+            <h2>How to Play:</h2>
+            <ol>
+              <li>Click the dice to make it rotate.</li>
+              <li>If it lands on an achievement picture, you'll see a message and move forward.</li>
+              <li> If it lands on a sad picture, you'll see a message and move backward.</li>
+              <li>Once you reach a score of 100, click the dice again.</li>
+              <li>Then, click on the "scores" button that appears.</li>
+              <li>You'll be taken to a dashboard showing all the pictures you've seen and messages received.</li>
+              <li>The dashboard has two sections: "Profit" for achievement messages and "Loss" for sad images, along with your scores.</li>
+              <li>Clicking on "foxian" will take you to the fosteringlinux website.</li>
+            </ol>
+            <p>Start Playing Now and Discover the World of <a href="https://www.fosteringlinux.com" target="_blank">Fostering Linux</a>!</p>
+    
+        </div>
+    
+
+        <script>
+            // JavaScript code for toggling about div
+            document.getElementById("aboutBtn").addEventListener("click", function () {
+                const aboutDiv = document.getElementById("aboutDiv");
+                aboutDiv.style.display = (aboutDiv.style.display === "none") ? "block" : "none";
+            });
+        </script>
+    
+
+
+
+        <script src="Index2.js"></script>
+    </body>
+</html>
